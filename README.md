@@ -4,6 +4,10 @@ A flutter widget that provides a circular widget that allows you make customizat
 
 Creates a circular visual widget that you can specify the size, stroke width, colors and desired values to fill determined angle of circle. Supports animations like Tweens to change the current value of fill and much more.
 
+Start             |  Middle             |  End
+:-------------------------:|:-------------------------:|:-------------------------:
+![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/start.png)  |  ![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/middle.png)  |  ![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/end.png)
+
 ## How to install
 Add this dependency to your pubspec.yml:
 
