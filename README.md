@@ -4,7 +4,7 @@ A flutter widget that provides a circular widget that allows you make customizat
 
 Creates a circular visual widget that you can specify the size, stroke width, colors and desired values to fill determined angle of circle. Supports animations like Tweens to change the current value of fill and much more.
 
-## Getting started
+## How to install
 Add this dependency to your pubspec.yml:
 
 ```yaml
@@ -40,27 +40,19 @@ See the full example [circular animation](https://github.com/MarioJunio/flutter-
 
 ## Widget properties
 **width**
-
-*double*
-
+*double*\
 Change the circle size width
 
 **height**
-
-*double*
-
+*double*\
 Change the circle size height
 
 **strokeWidth**
-
-*double*
-
+*double*\
 Change the circle stroke size width
 
 **strokeColor**
-
-*Color*
-
+*Color*\
 Change the circle stroke color
 
 ```dart
@@ -68,9 +60,7 @@ strokeColor: Colors.blue.withAlpha(50)
 ```
 
 **strokeValueColor**
-
-*Color*
-
+*Color*\
 Change the circle stroke color value
 
 ```dart
@@ -78,21 +68,15 @@ strokeColor: Colors.blue
 ```
 
 **min**
-
-*double*
-
+*double*\
 Set the min value that circle waits
 
 **max**
-
-*double*
-
+*double*\
 Set the max value that circle waits
 
 **centerColor**
-
-*Color*
-
+*Color*\
 Change the center color of circle
 
 ```dart
