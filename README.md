@@ -36,23 +36,31 @@ CircularGadgetWidget(
 )
 ```
 
-See the full example [circular animation](https://github.com/Ezaldeen99/flutter_circular_animator/tree/master/example).
+See the full example [circular animation](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/lib/examples).
 
 ## Widget properties
 **width**
+
 *double*
+
 Change the circle size width
 
 **height**
+
 *double*
+
 Change the circle size height
 
 **strokeWidth**
+
 *double*
+
 Change the circle stroke size width
 
 **strokeColor**
+
 *Color*
+
 Change the circle stroke color
 
 ```dart
@@ -60,7 +68,9 @@ strokeColor: Colors.blue.withAlpha(50)
 ```
 
 **strokeValueColor**
+
 *Color*
+
 Change the circle stroke color value
 
 ```dart
@@ -68,15 +78,21 @@ strokeColor: Colors.blue
 ```
 
 **min**
+
 *double*
+
 Set the min value that circle waits
 
 **max**
+
 *double*
+
 Set the max value that circle waits
 
 **centerColor**
+
 *Color*
+
 Change the center color of circle
 
 ```dart
