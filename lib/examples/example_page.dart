@@ -19,7 +19,7 @@ class _ExamplePageState extends State<ExamplePage>
 
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
     );
 
     _gadgetValueTween = Tween<double>(
@@ -31,32 +31,32 @@ class _ExamplePageState extends State<ExamplePage>
         curve: Curves.easeInOut,
       ),
     );
+
+    // ignore: avoid_single_cascade_in_expression_statements
+    _animationController
+      ..addStatusListener((status) {
+        setState(() {});
+      });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            _startAnimationBtn(context),
-            _circleGadget,
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _startAnimationBtn(context),
+          _circleGadget,
+        ],
       ),
     );
   }
 
-  Widget get _circleGadget => Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Center(
-              child: _animatedBuilder(context),
-            ),
-          ],
+  Widget get _circleGadget => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 32),
+        child: Center(
+          child: _animatedBuilder(context),
         ),
       );
 
@@ -100,19 +100,22 @@ class _ExamplePageState extends State<ExamplePage>
         },
       );
 
-  Widget _startAnimationBtn(context) => ElevatedButton(
-        onPressed: () {
-          if (_animationController.isCompleted) {
-            _animationController.reverse();
-          } else {
-            _animationController.forward();
-          }
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            "Start Animation",
-            style: Theme.of(context).textTheme.labelMedium,
+  Widget _startAnimationBtn(context) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        child: ElevatedButton(
+          onPressed: () {
+            if (_animationController.isCompleted) {
+              _animationController.reverse();
+            } else {
+              _animationController.forward();
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              _animationController.isCompleted ? "Reverse" : "Start",
+              style: Theme.of(context).textTheme.labelMedium,
+            ),
           ),
         ),
       );
