@@ -1,39 +1,84 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A flutter widget that provides a circular widget that allows you make customizations in its properties and build pretty animations using it.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Creates a circular visual widget that you can specify the size, stroke width, colors and desired values to fill determined angle of circle. Supports animations like Tweens to change the current value of fill and much more.
 
 ## Getting started
+Add this dependency to your pubspec.yml:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  circle_gadget: ^1.0.0
+```
+
+Now in your Dart code, you can use:
+
+```dart
+import 'package:circle_gadget/circle_gadget.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+The `circle_gadget` package itself is very simple to use just create a widget as stateless or statefull
 
 ```dart
-const like = 'sample';
+CircularGadgetWidget(
+    width: 200,
+    height: 200,
+    strokeColor: Theme.of(context).primaryColor.withAlpha(40),
+    strokeValueColor: Theme.of(context).primaryColor,
+    centerColor: Colors.grey.withAlpha(10),
+    strokeWidth: 8,
+    min: 0.0,
+    max: 180.0,
+    value: 100.0,
+)
 ```
 
-## Additional information
+See the full example [circular animation](https://github.com/Ezaldeen99/flutter_circular_animator/tree/master/example).
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## Widget properties
+**width**
+*double*
+Change the circle size width
+
+**height**
+*double*
+Change the circle size height
+
+**strokeWidth**
+*double*
+Change the circle stroke size width
+
+**strokeColor**
+*Color*
+Change the circle stroke color
+
+```dart
+strokeColor: Colors.blue.withAlpha(50)
+```
+
+**strokeValueColor**
+*Color*
+Change the circle stroke color value
+
+```dart
+strokeColor: Colors.blue
+```
+
+**min**
+*double*
+Set the min value that circle waits
+
+**max**
+*double*
+Set the max value that circle waits
+
+**centerColor**
+*Color*
+Change the center color of circle
+
+```dart
+strokeColor: Colors.white.withAlpha(30)
+```
