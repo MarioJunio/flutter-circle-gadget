@@ -51,9 +51,11 @@ class _ExamplePageState extends State<ExamplePage>
 
   Widget get _circleGadget => Expanded(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            _animatedBuilder(context),
+            Center(
+              child: _animatedBuilder(context),
+            ),
           ],
         ),
       );
