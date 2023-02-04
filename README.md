@@ -6,7 +6,7 @@ Creates a circular visual widget that you can specify the size, stroke width, co
 
 Start             |  Middle             |  End
 :-------------------------:|:-------------------------:|:-------------------------:
-![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/start.png)  |  ![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/middle.png)  |  ![alt text](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/end.png)
+![Start](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/start.png)  |  ![Middle](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/middle.png)  |  ![End](https://github.com/MarioJunio/flutter-circle-gadget/tree/main/images/end.png)
 
 ## How to install
 Add this dependency to your pubspec.yml:
