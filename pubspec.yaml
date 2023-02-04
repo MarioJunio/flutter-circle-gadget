@@ -1,6 +1,6 @@
 name: circle_gadget
 description: A flutter package which provides a circular gadget
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/MarioJunio/flutter-circle-gadget
 
 environment:
